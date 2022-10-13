@@ -1,0 +1,160 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    outline: none
+    font-family: 'Open Sans', sans-serif
+
+html 
+    scroll-behavior: smooth
+    overflow-x: hidden
+
+
+body
+    background: variables.$bg-color
+    color: variables.$text-color
+
+    a
+        color: variables.$text-color
+        text-decoration: none
+        transition: 0.3s all
+
+    ul
+        list-style: none
+
+.init
+    display: flex
+    gap: 5em
+    @include mixins.container
+    cursor: pointer
+    align-items: center
+    justify-content: space-between
+
+    @include mixins.tablet
+        padding: 1rem
+        @include mixins.center-content
+
+    &-title
+        color: variables.$principal-color
+        font-size: 2rem
+
+    .navbar
+        height: 100%
+        @include mixins.center-content
+
+        @include mixins.tablet
+            display: none
+
+
+        .navbar-list
+            @include mixins.center-content
+
+            .active
+                color: variables.$secondary-color
+
+        .navbar-icons
+            @include  mixins.center-content
+
+        li
+            margin: 0 1rem
+            font-weight: bold
+            text-transform: uppercase
+            font-size: 0.8rem
+
+li:hover
+    @include mixins.hover-navbar
+
+.gallery
+    @include mixins.container
+    @include mixins.center-content
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0 
+
+    @include mixins.tablet
+        max-width: 80%
+        gap: 2rem
+        justify-content: center
+
+    &-card
+        @include mixins.card
+        @include mixins.center-content
+        flex-direction: column
+        gap: 0
+
+
+        @include mixins.tablet
+            width: 40%
+            height: 300px
+
+        @include mixins.mobile
+            width: 75%
+
+        h3
+            font-size: 2rem
+            font-weight: 500
+            color: variables.$principal-color
+            margin-bottom: 1rem
+
+        .btn-card
+            border: 2px solid variables.$principal-color
+            color: variables.$principal-color
+            font-weight: 600
+            text-transform: uppercase
+            letter-spacing: 1px
+            padding: 0.6rem 2rem
+            border-radius: 0.2rem
+
+            &:hover
+                transition: 0.3s all
+                color: variables.$bg-color
+                background: variables.$principal-color
+
+
+    #card1
+        @include mixins.backgroundCard('animais.jpg')
+    
+    #card2
+        @include mixins.backgroundCard('arquitetura.jpg')
+
+    #card3
+        @include mixins.backgroundCard('cidade.jpg')
+    
+    #card4
+        @include mixins.backgroundCard('coffe.jpg')
+    
+    #card5
+        @include mixins.backgroundCard('animes.jpg')
+    
+    #card6
+        @include mixins.backgroundCard('arte.jpg')
+    
+    #card7
+        @include mixins.backgroundCard('arte2.jpg')
+
+    #card8
+        @include mixins.backgroundCard('woman.jpg')
+
+    #card9
+        @include mixins.backgroundCard('rustic.jpg')
+
+.end
+    @include mixins.center-content
+    padding: 2rem
+    border-top: 0.5px solid variables.$text-color 
+
+    .title
+        color: variables.$secondary-color
+        cursor: pointer
+
+        &:hover
+            color: variables.$text-color
+
+
+    &-paragraph
+        font-weight: bold
+        color: variables.$secondary-color
+

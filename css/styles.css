@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: #000;
+  color: #777;
+}
+body a {
+  color: #777;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+body ul {
+  list-style: none;
+}
+
+.init {
+  display: flex;
+  gap: 5em;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 860px) {
+  .init {
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.init-title {
+  color: #fff;
+  font-size: 2rem;
+}
+.init .navbar {
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 860px) {
+  .init .navbar {
+    display: none;
+  }
+}
+.init .navbar .navbar-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.init .navbar .navbar-list .active {
+  color: #20c992;
+}
+.init .navbar .navbar-icons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.init .navbar li {
+  margin: 0 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+li:hover {
+  transition: 0.3s all;
+  color: #20c992;
+}
+
+.gallery {
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+@media (max-width: 860px) {
+  .gallery {
+    max-width: 80%;
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+.gallery-card {
+  width: 30%;
+  height: 400px;
+  margin-bottom: 4%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+}
+@media (max-width: 860px) {
+  .gallery-card {
+    width: 40%;
+    height: 300px;
+  }
+}
+@media (max-width: 580px) {
+  .gallery-card {
+    width: 75%;
+  }
+}
+.gallery-card h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.gallery-card .btn-card {
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.6rem 2rem;
+  border-radius: 0.2rem;
+}
+.gallery-card .btn-card:hover {
+  transition: 0.3s all;
+  color: #000;
+  background: #fff;
+}
+.gallery #card1 {
+  background-image: url("../images/animais.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card1:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card2 {
+  background-image: url("../images/arquitetura.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card2:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card3 {
+  background-image: url("../images/cidade.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card3:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card4 {
+  background-image: url("../images/coffe.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card4:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card5 {
+  background-image: url("../images/animes.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card5:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card6 {
+  background-image: url("../images/arte.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card6:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card7 {
+  background-image: url("../images/arte2.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card7:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card8 {
+  background-image: url("../images/woman.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card8:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+.gallery #card9 {
+  background-image: url("../images/rustic.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s all;
+}
+.gallery #card9:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem #444;
+  transition: 0.2s all;
+  filter: none;
+  transform: scale(1.1);
+}
+
+.end {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-top: 0.5px solid #777;
+}
+.end .title {
+  color: #20c992;
+  cursor: pointer;
+}
+.end .title:hover {
+  color: #777;
+}
+.end-paragraph {
+  font-weight: bold;
+  color: #20c992;
+}
+
+/*# sourceMappingURL=styles.css.map */
